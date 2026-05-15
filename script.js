@@ -35,11 +35,15 @@ async function addStudent() {
 }
 
 async function deleteStudent(id) {
-    await fetch(`http://localhost:3000/students/${id}`, {
-        method: "DELETE"
-    });
+    try {
+        await fetch(`${API}/${id}`, {
+            method: "DELETE"
+        });
 
-    loadStudents();
+        loadStudents();
+    } catch (error) {
+        console.log("Delete failed:", error);
+    }
 }
 
 function searchStudent() {
