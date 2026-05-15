@@ -1,4 +1,4 @@
-const API = "https://student-management-system-pq9t.onrender.com";
+const API = "https://student-management-system-pq9t.onrender.com/students";
 
 async function loadStudents() {
     const res = await fetch(API);
