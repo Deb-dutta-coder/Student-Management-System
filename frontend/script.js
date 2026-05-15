@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/students";
+const API = "https://student-management-system-pq9t.onrender.com";
 
 async function loadStudents() {
     const res = await fetch(API);
